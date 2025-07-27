@@ -1,0 +1,136 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.page-header h1 {
+  font-size: 2.5rem;
+}
+.page-header p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 50px;
+}
+
+.team-card {
+  background: #f6e9e9;
+  border-radius: 12px;
+  height: 400px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.team-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.team-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #000;
+}
+
+h3{
+  color: #0077b6;
+  font-weight: bold;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 10px 0;
+}
+
+.socials {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.socials a {
+  font-size: 1.8rem;
+  color: #999;
+  transition: color 0.3s;
+}
+.socials .linkedin:hover { color: #0e76a8; }
+.socials .github:hover { color: #333; }
+.socials .twitter:hover { color: #1da1f2; }
+
+/* Scroll-to-Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+#scrollTopBtn:hover {
+  background-color: #005f86;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 992px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px 20px;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+  .team-container {
+    grid-template-columns: 1fr;
+    padding: 30px 10px;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .socials {
+    margin-top: 20px;
+    gap: 10px;
+  }
+}
+
